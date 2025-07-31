@@ -1,0 +1,19 @@
+public class Movies {
+        String name;
+        String duration;
+        String rating;
+
+
+        Movies(String name, String duration, String rating) {
+            this.name = name;
+            this.duration = duration;
+            this.rating = rating;
+
+        }
+
+        void displayMovies(int serialNumber) {
+            System.out.printf("%-10d %-35s %-10s %-10s\n", serialNumber, this.name, this.duration, this.rating);
+        }
+    }
+
+

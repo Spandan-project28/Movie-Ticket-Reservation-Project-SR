@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class HallLayout {
+    Scanner sc = new Scanner(System.in);
+HallLayout(){
+}
+void chooseScreenType(int choice){
+
+    switch (choice){
+        case 0->
+        {
+            System.out.println("Screen type available: 2D");
+            System.out.println("--------------------------");
+            System.out.print("Enter your choice(1): ");
+
+        }
+
+        case 1->
+        {
+
+            System.out.println("Screen type available: 1) 2D  2) 3D");
+            System.out.println("--------------------------");
+            System.out.print("Enter your choice(1-2): ");
+
+        }
+
+        case 2->
+        {
+            System.out.println("Screen type available: 1) 2D  2) 3D");
+            System.out.println("--------------------------");
+            System.out.print("Enter your choice(1-2): ");
+
+        }
+        case 3->
+        {
+            System.out.println("Screen type available: 2D");
+            System.out.println("--------------------------");
+            System.out.print("Enter your choice(1): ");
+
+        }
+    }
+    }
+
+    void printScreenType(int screenType){
+        switch (screenType){
+
+            case 1->
+                    System.out.println("Screen Type: 2D");
+
+            case  2->
+                    System.out.println("Screen Type: 3D");
+
+
+        }
+    }
+}

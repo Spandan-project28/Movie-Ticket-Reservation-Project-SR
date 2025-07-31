@@ -1,0 +1,79 @@
+public class Theatre {
+    int choice;
+    String[] ShowTime =new String[4];
+    int counter = 1;
+
+    HallLayout hall = new HallLayout();
+
+
+    Theatre(int choice) {
+        this.choice=choice;
+        switch(choice)
+
+        {
+
+            case 0: {
+                ShowTime[0] = "Show Timming: 10:30 am";
+                ShowTime[1] = "Show Timing: 1:30 pm";
+                ShowTime[2] = "Show Timing: 4:00 pm";
+                ShowTime[3] = "Show Timing: 7:45 pm";
+                break;
+            }
+            case 1: {
+
+                ShowTime[0] = "Show Timming: 9:30 am";
+                ShowTime[1] = "Show Timing: 2:45 pm";
+                ShowTime[2] = "Show Timing: 5:15 pm";
+                ShowTime[3] = "Show Timing: 9:00 pm";
+                break;
+
+            }
+            case 2: {
+
+                ShowTime[0] = "Show Timming: 9:15 am";
+                ShowTime[1] = "Show Timing: 11:30 pm";
+                ShowTime[2] = "Show Timing: 2:25 pm";
+                ShowTime[3] = "Show Timing: 5:30 pm";
+                break;
+            }
+            case 3: {
+                ShowTime[0] = "Show Timming: 10:00 am";
+                ShowTime[1] = "Show Timing: 12:30 pm";
+                ShowTime[2] = "Show Timing: 5:00 pm";
+                ShowTime[3] = "Show Timing: 9:45 pm";
+                break;
+            }
+
+        }
+        this.hall = new HallLayout();
+    }
+
+    void displayTiming() {
+
+        for (String time : ShowTime) {
+            System.out.printf("%d) %s\n", counter++, time);
+        }
+
+
+    }
+
+    String time ( int timeChoice){
+
+        return ShowTime[timeChoice-1];
+
+    }
+
+    void chooseScreenType(int choice){
+        this.hall.chooseScreenType(this.choice);
+    }
+
+    void printScreenType(int screenType){
+        this.hall.printScreenType(screenType);
+    }
+
+}
+
+
+
+
+

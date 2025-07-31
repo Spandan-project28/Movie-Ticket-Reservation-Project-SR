@@ -1,0 +1,114 @@
+
+
+public class Seat {
+    int [][] seatMatrix;
+    int premium;
+    int silver;
+    int classic;
+    int price;
+    String seatTypeContainer;
+    Seat(){}
+
+    void printSeat(int screenType){
+    //price condition
+        if(screenType==1){
+            premium=450;
+            silver=250;
+            classic=180;
+        }else if(screenType==2){
+            premium=600;
+            silver=300;
+            classic=240;
+        }
+
+
+        char letter='M';
+        System.out.printf("PREMIUM---> ₹%d\n",premium);
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+
+        for(int i=0;i<=12;i++){
+            System.out.print(letter + " ");
+
+            for(int j=1;j<25;j++){
+                System.out.printf(" [%2d]",j);
+                if(j==8 || j==16){
+                    System.out.print("   ");
+                }
+
+            }
+            System.out.println();
+
+            if(i==1 ){
+                System.out.printf("SILVER---> ₹%d\n", silver);
+                System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+
+            }
+
+            if(i==6){
+                System.out.printf("CLASSIC---> ₹%d\n", classic);
+                System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+
+            }
+            letter--;
+        }
+        System.out.println();
+        System.out.println("""
+                                      -----------------------------------------------------------------------------------
+                                                                         S C R E E N
+                """);
+    }
+
+    void printSeatDetails(int screenType,int seatType ,String seatRow,int seatNumber){
+
+        if(screenType==1){
+            premium=450;
+            silver=250;
+            classic=180;
+        }else if(screenType==2) {
+            premium = 600;
+            silver = 300;
+            classic = 240;
+        }
+
+            if(seatType==1){
+                seatTypeContainer="Premium";
+                price=premium;
+            }else if(seatType==2){
+              seatTypeContainer="Silver";
+              price=silver;
+            }else if(seatType==3){
+                seatTypeContainer="Classic";
+                price=classic;
+            }
+
+        System.out.printf( "%s - %s%d Price: ₹%d\n",seatTypeContainer,seatRow,seatNumber,price );
+
+    }
+
+    void ticketPrice(int screenType,int seatType ,String seatRow,int seatNumber){
+        if(screenType==1){
+            premium=450;
+            silver=250;
+            classic=180;
+        }else if(screenType==2) {
+            premium = 600;
+            silver = 300;
+            classic = 240;
+        }
+
+        if(seatType==1){
+            seatTypeContainer="Premium";
+            price=premium;
+        }else if(seatType==2){
+            seatTypeContainer="Silver";
+            price=silver;
+        }else if(seatType==3){
+            seatTypeContainer="Classic";
+            price=classic;
+        }
+
+        System.out.println("₹"+price);
+    }
+
+
+}
