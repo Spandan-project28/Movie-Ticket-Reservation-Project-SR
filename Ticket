@@ -1,0 +1,19 @@
+public class Ticket {
+    Theatre theatre;
+    Seat seat;
+ Ticket(Theatre theatre, Seat seat) {
+     this.theatre=theatre;
+        this.seat=seat;
+ }
+
+    void printTicket(int choice,int screenType,int TimeChoice,int seatType,String seatRow,int seatNumber) {
+
+        theatre.printScreenType(screenType);
+
+        System.out.println(theatre.time(TimeChoice));
+        System.out.print("Seat: ");
+        seat.printSeatDetails(screenType,seatType,seatRow,seatNumber);
+        System.out.print("Ticket Price: ");
+        seat.ticketPrice( screenType, seatType , seatRow, seatNumber);
+    }
+}
